@@ -153,7 +153,6 @@ async function createApp(dbPath) {
 
 
   /**
-   * Get an existing user
    * Delete all ratings
    */
   app.delete('/butterflyrating', async (req, res) => {
