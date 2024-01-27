@@ -26,7 +26,49 @@ async function init() {
       { id: 'OOWzUaHLsK', username: 'iluvbutterflies' },
       { id: 'sdmU7-wkQX', username: 'flutterby' },
       { id: 'aqekk3t4kw', username: 'metamorphosize_me' }
-    ]
+    ],
+    butterflyrating: [{
+      'id': 'cdz4MIeIT',
+      'butterflyid': 'NLktii5zvK',
+      'ratingkey': 'keyNLktii5zvKaqekk3t4kw',
+      'userid': 'aqekk3t4kw',
+      'rating': '5'
+    },
+    {
+      'id': 'CL3_sIdmM',
+      'butterflyid': 'NLktii5zvK',
+      'ratingkey': 'keyNLktii5zvKsdmU7-wkQX',
+      'userid': 'sdmU7-wkQX',
+      'rating': '5'
+    },
+    {
+      'id': 'WISaW0ORv',
+      'butterflyid': 'xRKSdjkBt4',
+      'ratingkey': 'keyxRKSdjkBt4OOWzUaHLsK',
+      'userid': 'OOWzUaHLsK',
+      'rating': '4'
+    },
+    {
+      'id': 'LfG4WuwpS',
+      'butterflyid': '0MUBKMu07U',
+      'ratingkey': 'key0MUBKMu07UOOWzUaHLsK',
+      'userid': 'OOWzUaHLsK',
+      'rating': '1'
+    },
+    {
+      'id': '3pH5_O3LA',
+      'butterflyid': 'xRKSdjkBt4',
+      'ratingkey': 'keyxRKSdjkBt4aqekk3t4kw',
+      'userid': 'aqekk3t4kw',
+      'rating': '5'
+    },
+    {
+      'id': '46EGqFwLU',
+      'butterflyid': 'xRKSdjkBt4',
+      'ratingkey': 'keyxRKSdjkBt4sdmU7-wkQX',
+      'userid': 'sdmU7-wkQX',
+      'rating': '0'
+    }]
   }).write();
 }
 

@@ -16,7 +16,16 @@ const validateUser = v.assert(
   })
 );
 
+const validateButterflyRating = v.assert(
+  v.strictShape({
+    userid: v.required(v.string),
+    rating: v.required(v.string),
+    type: v.oneOf('userid', 'rating')
+  })
+);
+
 module.exports = {
   validateButterfly,
-  validateUser
+  validateUser,
+  validateButterflyRating
 };
