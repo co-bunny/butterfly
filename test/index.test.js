@@ -30,7 +30,17 @@ beforeAll(async () => {
         id: 'abcd1234',
         username: 'test-user'
       }
+    ],
+    butterflyrating: [
+      {
+        id: 'cdz4MIeIT',
+        butterflyid: 'wxyz9876',
+        ratingkey: 'keyNLktii5zvKaqekk3t4kw',
+        userid: 'abcd1234',
+        rating: '5'
+      }
     ]
+
   }).write();
 
   // Create an app instance
@@ -203,6 +213,28 @@ describe('POST user', () => {
     expect(response.status).toBe(400);
     expect(response.body).toEqual({
       error: 'Invalid request body'
+    });
+  });
+
+  describe('GET /butterflies/getRating/:id', () => {
+    it('success', async () => {
+      const response = await request(app)
+        .get('/butterflies/getRating/abcd1234');
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual([{
+        id: 'wxyz9876',
+        commonName: 'test-butterfly',
+        species: 'Testium butterflius',
+        article: 'https://example.com/testium_butterflius'
+      }]);
+    });
+
+    it('not found', async () => {
+      const response = await request(app)
+        .get('/butterflies/getRating/abcd');
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual([]
+      );
     });
   });
 });
